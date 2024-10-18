@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение Python</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        main {
+            padding: 40px;
+            text-align: center;
+        }
+        
+        main h1 {
+            color: #333;
+        }
+        
+        main p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        section.courses {
+            margin-top: 40px;
+        }
+        
+        .course {
+            display: inline-block;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .course h2 {
+            font-size: 22px;
+            color: #4CAF50;
+        }
+        
+        .course p {
+            color: #555;
+            font-size: 16px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        /* Медиа-запросы для мобильных устройств */
+        
+        @media (max-width: 768px) {
+            header,
+            nav,
+            footer {
+                padding: 15px;
+            }
+            nav a {
+                font-size: 16px;
+                margin: 0 10px;
+            }
+            main {
+                padding: 20px;
+            }
+            main h1 {
+                font-size: 24px;
+            }
+            main p {
+                font-size: 16px;
+            }
+            .course {
+                width: 90%;
+                margin: 20px auto;
+            }
+        }
+        /* Медиа-запросы для очень маленьких экранов (например, мобильные телефоны) */
+        
+        @media (max-width: 480px) {
+            header,
+            nav,
+            footer {
+                padding: 10px;
+            }
+            nav a {
+                font-size: 14px;
+                margin: 0 5px;
+            }
+            main h1 {
+                font-size: 20px;
+            }
+            main p {
+                font-size: 14px;
+            }
+            .course h2 {
+                font-size: 18px;
+            }
+            .course p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Обучение Python</h1>
+        <p>Изучайте Python с нуля до профессионального уровня</p>
+    </header>
+
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/courses">Курсы</a>
+        <a href="/resources">Ресурсы</a>
+        <a href="/about">О нас</a>
+        <button onclick="window.location.href='/profile'">Мой профиль</button>
+    </nav>
+
+    <main>
+        <h1>Добро пожаловать на курс по Python</h1>
+        <p>Python — это мощный, легкий в освоении язык программирования. Здесь вы найдете все необходимые ресурсы, чтобы начать ваше путешествие по изучению Python!</p>
+
+        <section class="courses">
+            <div class="course">
+                <h2>Введение в Python</h2>
+                <p>Этот курс научит вас основам Python, начиная с простейших программ и до работы с данными.</p>
+            </div>
+
+            <div class="course">
+                <h2>Продвинутый Python</h2>
+                <p>Изучите более сложные концепции Python, такие как многопоточность, работа с файлами и объектно-ориентированное программирование.</p>
+            </div>
+
+            <div class="course">
+                <h2>Python для анализа данных</h2>
+                <p>Узнайте, как использовать Python для анализа данных, визуализации и работы с большими данными.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Обучение Python. Все права защищены.</p>
+    </footer>
+
+</body>
+
+</html>
