@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение Python</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="nice.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: 1, 79, 7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 50px;
+            color: #ffffff;
+        }
+        
+        main {
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            background-color: #ffffff;
+            color: #ffffff;
+            display: none;
+        }
+        
+        .start-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 30px;
+        }
+        
+        .start-btn:hover {
+            background-color: #218838;
+            transition: 0.3s;
+        }
+        
+        h1 {
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        
+        .course-list {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .course-item {
+            color: #444;
+            background-color: #f8f8f8;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .course-item h2 {
+            margin: 0;
+            font-size: 22px;
+        }
+        
+        .course-item p {
+            margin: 5px 0 0;
+            font-size: 18px;
+        }
+        
+        .course-price {
+            color: #28a745;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #444;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        nav a {
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        nav button {
+            background-color: #078f27;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        nav a:hover,
+        nav button:hover {
+            background-color: #097504;
+            transition: 0.3s;
+        }
+        
+        @media (max-width: 768px) {
+            main {
+                padding: 15px;
+            }
+            .course-item {
+                width: 90%;
+                margin: 10px auto;
+            }
+            .start-btn {
+                padding: 10px 20px;
+                font-size: 18px;
+            }
+            nav a,
+            nav button {
+                font-size: 16px;
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                font-size: 18px;
+                padding: 15px;
+            }
+            .start-btn {
+                padding: 10px 15px;
+                font-size: 16px;
+            }
+            .course-item h2 {
+                font-size: 20px;
+            }
+            .course-item p {
+                font-size: 14px;
+            }
+            nav a,
+            nav button {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Обучение Python</h1>
+        <p>Изучайте Python с нуля до профессионального уровня</p>
+        <ion-icon name="logo-python" class="icon"></ion-icon>
+    </header>
+
+    <main id="main-section" style="display: block;">
+        <h1>Добро пожаловать на курс по Python</h1>
+        <p>Python — это мощный, легкий в освоении язык программирования. Здесь вы найдете все необходимые ресурсы, чтобы начать ваше путешествие по изучению Python!</p>
+
+
+    </main>
+
+    <main id="courses" style="display: none;">
+        <h1>Доступные курсы</h1>
+        <div class="course-list">
+            <div class="course-item">
+                <h2>Курс для начинающих</h2>
+                <p>Научитесь основам Python и программированию с нуля.</p>
+                <div class="course-price">Цена: 50 000 KZT</div>
+
+                <a href="#" class="start-btn">Начать обучение</a>
+            </div>
+            <div class="course-item">
+                <h2>Курс для продвинутых</h2>
+                <p>Углубленные знания и проекты для опытных пользователей.</p>
+                <div class="course-price">Цена: 75 000 KZT</div>
+
+                <a href="#" class="start-btn">Начать обучение</a>
+            </div>
+            <div class="course-item">
+                <h2>Полный курс Python</h2>
+                <p>От основ до профессионального уровня с практическими заданиями.</p>
+                <div class="course-price">Цена: 100 000 KZT</div>
+
+                <a href="#" class="start-btn">Начать обучение</a>
+            </div>
+        </div>
+    </main>
+
+    <nav>
+        <a href="#" id="home-link">Главная</a>
+        <a href="#" id="courses-link">Курсы</a>
+        <button onclick="window.location.href='/profile'">Профиль</button>
+    </nav>
+
+    <script>
+        const mainSection = document.getElementById('main-section');
+        const coursesSection = document.getElementById('courses');
+
+        document.getElementById('courses-link').addEventListener('click', function() {
+            mainSection.style.opacity = '0';
+            setTimeout(() => {
+                mainSection.style.display = 'none';
+                coursesSection.style.display = 'block';
+                coursesSection.style.opacity = '1';
+            }, 50);
+        });
+
+        document.getElementById('home-link').addEventListener('click', function() {
+            coursesSection.style.opacity = '0';
+            setTimeout(() => {
+                coursesSection.style.display = 'none';
+                mainSection.style.display = 'block';
+                mainSection.style.opacity = '1';
+            }, 50);
+        });
+    </script>
+
+</body>
+
+</html>
