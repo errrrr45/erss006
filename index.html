@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -689,6 +689,175 @@
   
   
 </body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .weather-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .search-bar button {
+            background-color: #000000;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .search-bar button i {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .weather-info .icon i {
+            font-size: 150px;
+            color: #ffd43b;
+            margin-bottom: 10px;
+        }
+
+        .weather-info h1 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        .weather-info p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .detail {
+            text-align: center;
+        }
+
+        .detail i {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .detail p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .not-found {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .not-found p {
+            font-size: 18px;
+            color: red;
+            margin-bottom: 20px;
+        }
+
+        .not-found img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="location-input" placeholder="Enter Your Location">
+            <button onclick="searchLocation()"><i class="fa fa-search"></i></button>
+        </div>
+
+        <!-- Weather Information -->
+        <div class="weather-info" id="weather-info">
+            <div class="icon">
+                <i class="fa fa-sun"></i>
+            </div>
+            <h1>26°C</h1>
+            <p>Clear Sky</p>
+        </div>
+
+        <div class="details" id="details">
+            <div class="detail">
+                <i class="fa fa-tint"></i>
+                <p>47% Humidity</p>
+            </div>
+            <div class="detail">
+                <i class="fa fa-wind"></i>
+                <p>2.06 Km/h Wind</p>
+            </div>
+        </div>
+
+        <!-- Not Found Message -->
+        <div class="not-found" id="not-found">
+            <p>Sorry, Location not found!!!</p>
+            <img src="https://via.placeholder.com/200" alt="Not Found">
+        </div>
+    </div>
+
+    <script>
+        function searchLocation() {
+            const input = document.getElementById('location-input').value.trim();
+            const weatherInfo = document.getElementById('weather-info');
+            const details = document.getElementById('details');
+            const notFound = document.getElementById('not-found');
+
+if (input.toLowerCase() === 'nepal') {
+                // Show weather information
+                weatherInfo.style.display = 'block';
+                details.style.display = 'flex';
+                notFound.style.display = 'none';
+            } else {
+                // Show "not found" message
+                weatherInfo.style.display = 'none';
+                details.style.display = 'none';
+                notFound.style.display = 'block';
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/0b205d5e2a.js" crossorigin="anonymous"></script>
+</body>
 </html>
+
 
 
