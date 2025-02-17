@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -688,6 +688,40 @@
   </script>
   
   
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сатылымдар</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="product-card">
+            <div class="product-img">
+                <img src="img/rolex-.png" alt="">
+            </div>
+            <div class="product-description">
+                <h4>Rolex</h4>
+                <p class="product-price">5000$</p>
+                <div class="product-count">
+                    <button class="product-decrement" onclick="productDecrement()">-</button>
+                    <p class="product-value">0</p>
+                    <button class="product-increment" onclick="productIncrement()">+</button>
+                </div>
+            </div>
+            <div class="button-box">
+                <button class="button-calc" onclick="getTotalPrice()">Расчитать</button>
+                <p class="button-total"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
 
