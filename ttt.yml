@@ -1,0 +1,32 @@
+name: Deploy Homework to GitLab Pages
+
+on:
+
+push:
+
+branches:
+
+- main
+jobs:
+
+deploy:
+
+runs-on: ubuntu-latest
+
+steps:
+
+- name: Checkout code
+
+uses: actions/checkout@v2
+
+- name: Set up Git
+
+uses: actions/setup-git@v2
+
+name: Push to GitLab Pages
+
+run: |
+
+git remote add gitlab https://gitlab.com/username/my-homework.git
+
+git push gitlab main
