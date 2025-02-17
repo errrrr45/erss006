@@ -1,0 +1,58 @@
+.product-card {
+    width: 270px;
+    height: 350px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product-img {
+    height: 50%;
+}
+
+.product-img img {
+    height: 100%;
+}
+
+.product-description {
+    font-family:'Courier New', Courier, monospace;
+}
+
+.product-description h4, p {
+    margin: 10px 0px;
+}
+
+.product-count {
+    display: flex;
+    justify-content: center;
+}
+.product-count button {
+    margin: 0px 5px;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.button-box {
+    margin: 20px 10px;
+    margin-top: 0px;
+}
+
+.button-calc {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(19, 193, 19);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button-calc:hover {
+    background-color: darkgreen;
+}
+
+.button-total {
+    margin-top: 10px;
+}
