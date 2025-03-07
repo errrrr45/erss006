@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -689,7 +689,7 @@
   
   
 </body>
-</html>
+</html>-->
 
 <!--<!DOCTYPE html>
 <html lang="en">
@@ -725,4 +725,147 @@
 </body>
 </html>-->
 
-
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Наурыз Құттықтау</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: #fff;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            position: relative;
+            padding: 50px 20px;
+            margin-top: 50px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-size: 60px;
+            font-family: 'Great Vibes', cursive;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+        .message {
+            font-size: 24px;
+            margin: 20px auto;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: white;
+            background: linear-gradient(45deg, #ff4081, #ff79a2);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+            animation: fadeIn 3s ease-in-out;
+            margin: 10px;
+        }
+        .button:hover {
+            background: linear-gradient(45deg, #e91e63, #ff5678);
+        }
+        .flowers {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        .flower {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            opacity: 0;
+            animation: fall 6s linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                opacity: 1;
+                transform: translateY(-100px) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="Цветы.mp3" type="audio/mp3">
+    </audio>
+    <div class="container">
+        <h1>🌸 8 Наурыз Құтты Болсын! 🌸</h1>
+        <p class="message" id="greeting-message">Құрметті ханымдар! Сіздерді көктемнің керемет мерекесімен құттықтаймыз! Сіздерге шаттық, махаббат, денсаулық және бақыт тілейміз! 💖</p>
+        <button class="button" onclick="showGreeting()">Құттықтау</button>
+        <button class="button" onclick="toggleMusic()">Музыканы қосу/өшіру</button>
+        <button class="button" onclick="changeBackground()">Фонды өзгерту</button>
+        <button class="button" onclick="showAdditionalGreeting()">Қосымша құттықтау</button>
+    </div>
+    <div class="flowers"></div>
+    <script>
+        function showGreeting() {
+            alert("Сізге көктемнің ең әдемі сәттерін тілейміз! ❤️");
+            document.getElementById("bg-music").play();
+        }
+        function toggleMusic() {
+            let music = document.getElementById("bg-music");
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+        function changeBackground() {
+            const colors = ["#ff758c", "#ff9a9e", "#fad0c4", "#ff7eb3", "#ff5678"];
+            document.body.style.background = `linear-gradient(to right, ${colors[Math.floor(Math.random() * colors.length)]}, #ff7eb3)`;
+        }
+        function showAdditionalGreeting() {
+            const greetings = [
+                "Сізге махаббат пен жылулық тілейміз! 💖",
+                "Көңіл-күйіңіз әрқашан көктемдей шуақты болсын! ☀️",
+                "Жанұяңызға бақыт пен шаттық тілейміз! 🎉",
+                "Әр күніңіз гүлдей жайнаған болсын! 🌸",
+                "Сізге сәттілік пен қуаныш тілейміз! 🌟"
+            ];
+            document.getElementById("greeting-message").innerText = greetings[Math.floor(Math.random() * greetings.length)];
+        }
+        function createFlower() {
+            const flower = document.createElement("img");
+            flower.src = "img/цвет.jpg";
+            flower.classList.add("flower");
+            flower.style.left = Math.random() * window.innerWidth + "px";
+            flower.style.animationDuration = (Math.random() * 3 + 4) + "s";
+            flower.style.width = (Math.random() * 20 + 30) + "px";
+            document.querySelector(".flowers").appendChild(flower);
+            setTimeout(() => flower.remove(), 6000);
+        }
+        setInterval(createFlower, 300);
+    </script>
+</body>
+</html>
