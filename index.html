@@ -731,56 +731,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8 Наурыз Құттықтау</title>
+    <title>8 Наурыз мерекесі</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body {
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
             font-family: 'Arial', sans-serif;
             text-align: center;
             background: linear-gradient(to right, #ff758c, #ff7eb3);
             color: #fff;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            transition: background 0.5s ease-in-out;
         }
         .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             padding: 20px;
-            margin-top: 30px;
-            animation: fadeIn 2s ease-in-out;
+            text-align: center;
         }
         h1 {
-            font-size: 36px;
+            font-size: 40px;
             font-family: 'Great Vibes', cursive;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
         }
         .message {
             font-size: 18px;
-            margin: 15px auto;
             max-width: 90%;
             background: rgba(255, 255, 255, 0.3);
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2.5s ease-in-out;
         }
         .button {
-            display: block;
-            width: 90%;
-            max-width: 250px;
-            margin: 10px auto;
             padding: 12px 20px;
             font-size: 16px;
-            font-weight: bold;
             color: white;
             background: linear-gradient(45deg, #ff4081, #ff79a2);
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
+            transition: 0.3s;
             box-shadow: 0 4px 12px rgba(255, 64, 129, 0.4);
+            width: 90%;
+            max-width: 250px;
+            margin-top: 10px;
         }
         .button:hover {
             background: linear-gradient(45deg, #e91e63, #ff5678);
-            transform: scale(1.05);
         }
         .flowers {
             position: absolute;
@@ -794,65 +797,57 @@
             position: absolute;
             width: 30px;
             height: 30px;
-            opacity: 0;
-            animation: fall 5s linear infinite;
+            opacity: 0.8;
+            animation: fall 6s linear infinite;
         }
         @keyframes fall {
-            0% { opacity: 1; transform: translateY(-50px) rotate(0deg); }
-            100% { opacity: 0; transform: translateY(100vh) rotate(360deg); }
+            0% { opacity: 1; transform: translateY(-100px) rotate(0deg); }
+            100% { opacity: 0; transform: translateY(100vh) rotate(180deg); }
         }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
         @media (max-width: 600px) {
-    h1 {
-        font-size: 24px;
-    }
-    .message {
-        font-size: 14px;
-        padding: 10px;
-        line-height: 1.5;
-    }
-    .button {
-        font-size: 14px;
-        padding: 10px 15px;
-        max-width: 200px;
-    }
-    .flower {
-        width: 20px;
-        height: 20px;
-    }
-}
-
+            h1 {
+                font-size: 26px;
+            }
+            .message {
+                font-size: 14px;
+                padding: 10px;
+            }
+            .button {
+                font-size: 14px;
+                padding: 10px 18px;
+            }
+            .flower {
+                width: 20px;
+                height: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <audio id="bg-music" loop>
         <source src="Цветы.mp3" type="audio/mp3">
     </audio>
-
     <div class="container">
         <h1>🌸 8 Наурыз Құтты Болсын! 🌸</h1>
-        <p class="message" id="greeting-message">Құрметті ханымдар! Сіздерді көктемнің керемет мерекесімен құттықтаймыз! Сіздерге шаттық, махаббат, денсаулық және бақыт тілейміз! 💖</p>
-        
+        <p class="message" id="greeting-message">
+            Құрметті ханымдар! Сіздерді көктемнің керемет мерекесімен құттықтаймыз! 
+            Сіздерге шаттық, махаббат, денсаулық және бақыт тілейміз! 💖
+        </p>
         <button class="button" onclick="showGreeting()">Құттықтау</button>
         <button class="button" onclick="toggleMusic()">Музыканы қосу/өшіру</button>
         <button class="button" onclick="changeBackground()">Фонды өзгерту</button>
         <button class="button" onclick="showAdditionalGreeting()">Қосымша құттықтау</button>
     </div>
-
     <div class="flowers"></div>
-
     <script>
         function showGreeting() {
             alert("Сізге көктемнің ең әдемі сәттерін тілейміз! ❤️");
-            let music = document.getElementById("bg-music");
-            if (music.paused) {
-                music.play();
-            }
+            document.getElementById("bg-music").play();
         }
-
         function toggleMusic() {
             let music = document.getElementById("bg-music");
             if (music.paused) {
@@ -861,12 +856,10 @@
                 music.pause();
             }
         }
-
         function changeBackground() {
             const colors = ["#ff758c", "#ff9a9e", "#fad0c4", "#ff7eb3", "#ff5678"];
             document.body.style.background = `linear-gradient(to right, ${colors[Math.floor(Math.random() * colors.length)]}, #ff7eb3)`;
         }
-
         function showAdditionalGreeting() {
             const greetings = [
                 "Сізге махаббат пен жылулық тілейміз! 💖",
@@ -877,19 +870,16 @@
             ];
             document.getElementById("greeting-message").innerText = greetings[Math.floor(Math.random() * greetings.length)];
         }
-
         function createFlower() {
             const flower = document.createElement("img");
-            flower.src = "цвет.jpg"; // Гүлдің суретін жүктеңіз
+            flower.src = "цвет.jpg";
             flower.classList.add("flower");
             flower.style.left = Math.random() * window.innerWidth + "px";
             flower.style.animationDuration = (Math.random() * 3 + 4) + "s";
-            flower.style.width = (Math.random() * 20 + 30) + "px";
             document.querySelector(".flowers").appendChild(flower);
-            setTimeout(() => flower.remove(), 5000);
+            setTimeout(() => flower.remove(), 6000);
         }
-
-        setInterval(createFlower, 500);
+        setInterval(createFlower, 800);
     </script>
 </body>
 </html>
